@@ -19,8 +19,7 @@ jobs:
     - name: using secret from varibale
       run: echo "secret is ${{ secrets.SUPER_SECRET_PASSWORD }}"
 
-    - name: using value from other step
-      run: echo " ${{ steps.1.outputs }}"
+  
       
       
   
