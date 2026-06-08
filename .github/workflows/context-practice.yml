@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: first step
+      id: 1
       run: | 
         echo "This workflow was triggered by user: ${{ github.actor }}"
         echo "The currunt repository is: ${{ github.repository }}"
@@ -17,6 +18,9 @@ jobs:
 
     - name: using secret from varibale
       run: echo "secret is ${{ secrets.SUPER_SECRET_PASSWORD }}"
+
+    - name: using value from other step
+      run: echo " ${{ steps.1.outputs }}"
       
       
   
