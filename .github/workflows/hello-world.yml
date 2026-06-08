@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: clone the code
-      uses:  actions/checkout@4
+      uses:  actions/checkout@v4
 
     - name: run greeting
       run: echo "hello from checkout"
