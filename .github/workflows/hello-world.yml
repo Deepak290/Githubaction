@@ -1,0 +1,25 @@
+name:  My first github wiorkflow
+
+on: 
+ push:
+   branches:
+     - main
+
+jobs:
+  says-hello-jobs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: clone the code
+      uses:  actions/checkout@4
+
+    - name: run greeting
+      run: echo "hello from checkout"
+
+    - name: Print System Information
+      run: |
+          echo "Current runner operating system:"
+          uname -a
+          echo "Current directory contents:"
+          ls -la
+    
+  
