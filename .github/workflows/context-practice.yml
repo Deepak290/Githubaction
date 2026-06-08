@@ -1,0 +1,23 @@
+name: context practice learn
+
+on: [push]
+
+env:
+  APPLICATION_NAME: "MasterClass"
+  
+jobs:
+  context_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: first step
+      run: | 
+        echo "This workflow was triggered by user: ${{ github.actor }}"
+        echo "The currunt repository is: ${{ github.repository }}"
+        echo "The Application  name is: ${{ env.APPLICATION_NAME }} "
+
+    - name: using secret from varibale
+      run: echo "secret is ${{ secrets.SUPER_SECRET_PASSWORD }}"
+      
+      
+  
+  
