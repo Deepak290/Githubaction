@@ -1,0 +1,9 @@
+name: build and push image
+
+on:
+ push:
+   branches: [ main ]
+   
+jobs:
+  
+  
